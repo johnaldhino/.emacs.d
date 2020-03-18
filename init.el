@@ -8,6 +8,39 @@
 ;; (define-key global-map "\C-ca" 'org-agenda)
 
 
+; following lines enure loading and updating of packages (using use-package)
+
+
+(eval-when-compile
+  (require 'use-package))
+
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
+
+(use-package auto-package-update
+  :config
+  (setq auto-package-update-delete-old-versions t)
+  (setq auto-package-update-hide-results t)
+  (auto-package-update-maybe))
+
+
+(use-package auctex)
+(use-package babel)
+(use-package company)
+(use-package expand-region)
+(use-package magit)
+(use-package org-babel-eval-in-repl)
+(use-package pdf-tools)
+(use-package rainbow-delimiters)
+(use-package yasnippet-snippets)
+
+
+
+
+
+
+
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-c\C-l" 'org-insert-link)
 (global-set-key "\C-ca" 'org-agenda)
