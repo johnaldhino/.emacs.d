@@ -8,7 +8,21 @@
 ;; (define-key global-map "\C-ca" 'org-agenda)
 
 
+
 ; following lines enure loading and updating of packages (using use-package)
+
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
+;; ;; Bootstrap 'use-package'
+;; (eval-after-load 'gnutls
+;;   '(add-to-list 'gnutls-trustfiles "/etc/ssl/cert.pem"))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 
 (eval-when-compile
