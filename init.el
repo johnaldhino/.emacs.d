@@ -13,8 +13,8 @@
 
 
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
 (package-initialize)
 
 ;; ;; Bootstrap 'use-package'
@@ -96,19 +96,11 @@
 (setq TeX-parse-self t)
 
 
-; add package archives
-
-(require 'package)
-(add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives
-  '("gnu" . "http://elpa.gnu.org/packages/"))
-
 
 ; for pdf tools
 
-(pdf-tools-install)
 
+(pdf-tools-install)
 
 ;; Use pdf-tools to open PDF files
 (setq TeX-view-program-selection '((output-pdf "PDF Tools"))
