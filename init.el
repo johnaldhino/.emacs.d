@@ -54,6 +54,7 @@
 
 
 
+(setq org-image-actual-width nil)
 
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-c\C-l" 'org-insert-link)
