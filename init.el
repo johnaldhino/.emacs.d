@@ -143,13 +143,20 @@
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 
+(windmove-default-keybindings)
+
+
 ;; global flycheck mode
 
-(global-flycheck-mode)
+;(global-flycheck-mode)
 
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+
+;; (global-set-key [?\M-n] (lambda () (forward-line 5)))
+;; (global-set-key (kbd "M-n") (lambda () (interactive) (forward-line 5)))
 
 
 
